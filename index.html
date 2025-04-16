@@ -19,12 +19,26 @@
     
     <!-- Telegram Web App SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tg = window.Telegram.WebApp;
+        tg.ready();
+        tg.expand();
+      });
+    </script>
     <script type="module" crossorigin src="/assets/index-1UQT6JeO.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DkzNewa3.css">
   </head>
 
   <body>
     <div id="root"></div>
+    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="WinoBit_bot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+    <script type="text/javascript">
+      function onTelegramAuth(user) {
+        console.log('Logged in as', user);
+        // You can send user data to your backend here
+      }
+    </script>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   </body>
